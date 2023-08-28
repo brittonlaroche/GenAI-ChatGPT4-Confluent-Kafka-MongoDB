@@ -232,12 +232,12 @@ function SendToOpenAI() {
 const speechToText = document.getElementById('chkSpeakToText');
 speechToText.onclick = async () => {
 
-    if (chkMute.checked){
+    if (speechToText.checked){
         return;
     }
     if (oSpeechRecognizer) {
 
-        if (chkSpeak.checked) {
+        if (speechToText.checked) {
             oSpeechRecognizer.start();
         } else {
             oSpeechRecognizer.stop();
