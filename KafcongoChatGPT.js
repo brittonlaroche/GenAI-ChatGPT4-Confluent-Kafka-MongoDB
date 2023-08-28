@@ -117,12 +117,18 @@ function SendToOpenAI() {
 
     spMsg.innerHTML = "Chat GPT is thinking...";
 
+    //lets keep context
+    conversationHistory.push({
+        "role": "user", //system,user,assistant
+        "content": sQuestion
+    });
+
     var sUrl = "https://api.openai.com/v1/completions";
     var sModel = selModel.value;// "text-davinci-003";
-    if (sModel.indexOf("gpt-4") != -1 ) {
+    if (sModel.indexOf("gpt-") != -1 ) {
         //https://openai.com/research/gpt-4
         sUrl = "https://api.openai.com/v1/chat/completions";
-    }
+    } 
 
     var oHttp = new XMLHttpRequest();
     console.log(sUrl);
@@ -207,12 +213,7 @@ function SendToOpenAI() {
     }
 
     //chat GPT-4 gpt-4
-    if (sModel.indexOf("gpt-4") != -1) {
-        //lets keep context
-        conversationHistory.push({
-            "role": "user", //system,user,assistant
-            "content": sQuestion
-        });
+    if (sModel.indexOf("gpt-") != -1) {
         //conversationHistoryCopy = JSON.parse(JSON.stringify(conversationHistory));
         data = {
             "model": sModel,
