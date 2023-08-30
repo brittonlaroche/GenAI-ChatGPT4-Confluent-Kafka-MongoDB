@@ -104,7 +104,7 @@ sendOpenAIButton.onclick = async () => {
 
 function SendToOpenAI() {
 
-    if (chkMute.checked){
+    if (document.getElementById('chkMute').checked){
         return;
     }
 
@@ -233,9 +233,6 @@ function SendToOpenAI() {
 const speechToText = document.getElementById('chkSpeakToText');
 speechToText.onclick = async () => {
 
-    if (chkMute.checked){
-        return;
-    }
     if (oSpeechRecognizer) {
 
         if (speechToText.checked) {
