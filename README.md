@@ -6,7 +6,6 @@
 ## Initial Setup:
 * (install express) open a terminal in the folder and run  - npm install express
 * Add additional npm installs for what is missing in app.js
-* run - npm install express
 * run - npm i cors
 * run - npm i express http-proxy-middleware
 * run - npm i express morgan
