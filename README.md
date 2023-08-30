@@ -6,6 +6,10 @@
 ## Initial Setup:
 * (install express) open a terminal in the folder and run  - npm install express
 * Add additional npm installs for what is missing in app.js
+* run - npm install express
+* run - npm i cors
+* run - npm i express http-proxy-middleware
+* run - npm i express morgan
 * Pay attention to the rewrite rules in app.js and update for your MongoDB Atlas and Confluent Cloud Environments
 * (add your api keys) edit the `api.json` inside the uncompressed folder and replace the emoji with your key
 
